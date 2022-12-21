@@ -10,18 +10,18 @@
     <title>Sikadu UNBAJA | Login</title>
 </head>
 
-<body style="background-color: lightgray;">
+<body style="background-color: #146788;">
 
     <section class="vh-100 gradient-custom">
         <div class="container py-5 h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-                    <div class="card bg-dark text-white" style="border-radius: 1rem;">
-                        <div class="card-body pt-2 pb-2 text-center">
-                            <div class="mb-md-3 mt-md-4 pb-5">
+                    <div class="card bg-light" style="border-radius: 1rem;">
+                        <div class="card-body pt-1 pb-0 text-center">
+                            <div class="mb-md-1 mt-md-4 pb-5">
 
                                 <h2>LOGIN</h2>
-                                <p class="text-white-50 mb-5">Please enter your login and password!</p </div>
+                                <p class="mb-5">Please enter your login and password!</p </div>
 
                                 <form action="Login/Login.php" method="POST">
                                     <?php if (isset($_GET['pesan'])) { ?>
@@ -31,15 +31,15 @@
                                     <?php } ?>
 
                                     <div class="form-outline form-white mb-4">
-                                        <input type="text" id="typeEmailX" class="form-control form-control-lg" name="frmUsername" />
-                                        <label class="form-label" for="typeEmailX">Username</label>
+                                        <label class="form-label font-weight-bold" for="typeEmailX">Username</label>
+                                        <input type="text" id="typeEmailX" class="form-control form-control-lg border border-dark" name="frmUsername" />
                                     </div>
                                     <div class="form-outline form-white mb-4">
-                                        <input type="password" id="typePasswordX" class="form-control form-control-lg" name="frmPassword" />
-                                        <label class="form-label" for="typePasswordX">Password</label>
+                                        <label class="form-label font-weight-bold" for="typePasswordX">Password</label>
+                                        <input type="password" id="typePasswordX" class="form-control form-control-lg border border-dark" name="frmPassword" />
                                     </div>
 
-                                    <button class="btn btn-outline-light btn-lg px-5" name="btnLogin" type="submit">Login</button>
+                                    <button class="btn btn-outline-dark btn-lg px-5 mt-4" name="btnLogin" type="submit">Login</button>
                                 </form>
 
                             </div>

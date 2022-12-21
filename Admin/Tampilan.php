@@ -14,10 +14,10 @@
 <body>
 
     <div class="wrapper d-flex align-items-stretch">
-        <nav id="sidebar">
+        <nav id="sidebar" style="background-color: #146788;">
             <div class="p-4 pt-5">
                 <a href="#" class="img logo mb-5" style="background-image: url(../images/LogoUBJ.png);"></a>
-                <ul class="list-unstyled components mb-5">
+                <ul class="list-unstyled components mb-5" style="font-weight: 400;">
                     <li>
                         <a href="?halaman=home"><i class="fa-solid fa-house me-2"></i>&emsp;Home</a>
                     </li>
@@ -54,7 +54,6 @@
 
         <!-- Page Content  -->
         <div id="content" class="p-4 p-md-5">
-
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
                     <button type="button" id="sidebarCollapse" class="btn btn-primary">
@@ -69,10 +68,20 @@
                 </div>
             </nav>
 
-            <h3 class="mb-4">Sikadu v2.0</h3>
+            <div class="row">
+                <div class="col-md-7">
+                    <h4 class="mb-4">Sikadu v2.0</h4>
+                </div>
+                <div class="col-md-5">
+                    <form class="d-flex" role="search">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
             <hr>
-            <?php include 'Config.php'; ?>
 
+            <?php include 'Config.php'; ?>
 
         </div>
     </div>
