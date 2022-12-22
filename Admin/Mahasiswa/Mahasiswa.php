@@ -10,11 +10,12 @@ $data_mahasiswa = query("SELECT * FROM mahasiswa
 // }
 ?>
 
+
 <div class="container mt-5">
     <h3 class="ml-4"><i class="fa-solid fa-user-graduate"></i>&ensp;Halaman Mahasiswa</h3>
 </div>
 
-<div class="container table-responsive text-center" style="height: 350px;overflow: scroll;">
+<div id="table-mahasiswa" class="container table-responsive text-center">
     <table class="table border-secondary mt-4 table-bordered">
         <thead>
             <tr class="d-flex">
@@ -44,18 +45,18 @@ $data_mahasiswa = query("SELECT * FROM mahasiswa
             <tbody>
                 <tr class="d-flex">
                     <th scope="row" class="col-1"><?= $no; ?></th>
-                    <th scope="row" class="col-2"><?= $data["NIK"]; ?></th>
-                    <td class="col-2"><?= $data["NIM"]; ?></td>
-                    <td class="col-2"><?= $data["nama"]; ?></td>
+                    <th scope="row" class="col-2"><?= $data["nik"]; ?></th>
+                    <td class="col-2"><?= $data["npm"]; ?></td>
+                    <td class="col-2"><?= $data["nama_mhs"]; ?></td>
                     <td class="col-2"><?= $data["email"]; ?></td>
                     <td class="col-2"><?= $data["tempat_lahir"]; ?></td>
                     <td class="col-2"><?= $data["tanggal_lahir"]; ?></td>
                     <td class="col-2"><?= $data["jenis_kelamin"]; ?></td>
                     <td class="col-2"><?= $data["nomor_telpon"]; ?></td>
                     <td class="col-2"><?= $data["alamat"]; ?></td>
-                    <td class="col-2"><?= $data["Nama_fakultas"]; ?></td>
+                    <td class="col-2"><?= $data["nama_fakultas"]; ?></td>
                     <td class="col-2"><?= $data["nama_prodi"]; ?></td>
-                    <td class="col-2"><?= $data["Jenjang"]; ?></td>
+                    <td class="col-2"><?= $data["jenjang"]; ?></td>
                     <td class="col-2"><?= $data["kelas"]; ?></td>
                     <td class="col-2"><?= $data["kelompok"]; ?></td>
                     <td class="col-2">

@@ -696,6 +696,7 @@ pre {
   margin-left: 91.66667%; }
 
 @media (min-width: 576px) {
+
   .col-sm {
     -ms-flex-preferred-size: 0;
     flex-basis: 0;
@@ -1545,6 +1546,7 @@ pre {
     background-color: rgba(255, 255, 255, 0.075); }
 
 @media (max-width: 575.98px) {
+
   .table-responsive-sm {
     display: block;
     width: 100%;
@@ -1572,6 +1574,7 @@ pre {
       border: 0; } }
 
 @media (max-width: 1199.98px) {
+
   .table-responsive-xl {
     display: block;
     width: 100%;
@@ -1966,6 +1969,7 @@ textarea.form-control {
   .form-inline .form-check {
     width: 100%; }
   @media (min-width: 576px) {
+
     .form-inline label {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -2568,6 +2572,7 @@ input[type="button"].btn-block {
   left: auto; }
 
 @media (min-width: 576px) {
+  
   .dropdown-menu-sm-left {
     right: auto;
     left: 0; }

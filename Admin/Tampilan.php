@@ -81,8 +81,8 @@
             </div>
             <hr>
 
-            <?php include 'Config.php'; ?>
-
+                <?php include 'Config.php'; ?>
+            
         </div>
     </div>
 
