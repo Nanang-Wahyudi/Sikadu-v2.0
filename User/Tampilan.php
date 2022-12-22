@@ -16,8 +16,16 @@
     <div class="wrapper d-flex align-items-stretch">
         <nav id="sidebar" style="background-color: #146788;">
             <div class="p-4 pt-5">
-                <a href="#" class="img logo mb-5" style="background-image: url(../images/LogoUBJ.png);">
-                </a>
+                <div class="foto">
+                    <a href="#" class="img logo" style="background-image: url(../images/LogoUBJ.png);">
+                    </a>
+                </div>
+                <div class="keterangan pb-4 pt-1 text-center">
+                    <h5 class="text-white">Universitas Banten Jaya</h5>
+                    <span>Kota Serang, Banten</span>
+                </div>
+                <hr class="border-white pb-4">
+
                 <ul class="list-unstyled components mb-5" style="font-weight: 400;">
                     <li>
                         <a href="?halaman=home"><i class="fa-solid fa-house me-2"></i>&emsp;Home</a>
@@ -29,14 +37,6 @@
                     <li>
                         <a href="?halaman=dosen"><i class="fa-solid fa-chalkboard-user">
                             </i>&emsp;Dosen</a>
-                    </li>
-                    <li>
-                        <a href="?halaman=fakultas"><i class="fa-solid fa-building-columns">
-                            </i>&emsp;&nbsp;Fakultas</a>
-                    </li>
-                    <li>
-                        <a href="?halaman=prodi"><i class="fa-solid fa-school"></i>&emsp;Program
-                            Studi</a>
                     </li>
                     <li>
                         <a href="?halaman=matkul"><i class="fa-solid fa-book"></i>&emsp;&nbsp;Mata
@@ -89,7 +89,7 @@
                 </div>
             </div>
             <hr>
-            
+
             <?php include 'Config.php'; ?>
 
         </div>

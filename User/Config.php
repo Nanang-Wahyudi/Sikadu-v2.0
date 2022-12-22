@@ -7,12 +7,6 @@ if ($halaman == "mahasiswa") {
 elseif ($halaman == "dosen") {
     include 'Dosen/Dosen.php';
 }
-elseif ($halaman == "fakultas") {
-    include 'Fakultas/Fakultas.php';
-}
-elseif ($halaman == "prodi") {
-    include 'Prodi/Prodi.php';
-}
 elseif ($halaman == "matkul") {
     include 'Matkul/Matkul.php';
 }
