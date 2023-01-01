@@ -5,14 +5,27 @@ $data_mahasiswa = query("SELECT * FROM mahasiswa
                          INNER JOIN prodi ON mahasiswa.id_prodi = prodi.id_prodi
                          ORDER BY id_mahasiswa DESC");
 
-// if (isset($_POST["cari"])) {
-//     $data_kependudukan = cari($_POST["keyword"]);
-// }
+if (isset($_POST["cari"])) {
+    $data_mahasiswa = cari($_POST["keyword"]);
+}
 ?>
 
 
-<div class="container mt-5">
-    <h3 class="ml-4"><i class="fa-solid fa-user-graduate"></i>&ensp;Halaman Mahasiswa</h3>
+<div class="container row mt-5">
+    <div class="col-md-7">
+        <h3><i class="fa-solid fa-user-graduate"></i>&ensp;Halaman Mahasiswa</h3>
+    </div>
+    <div class="col-md-5">
+        <form action="" method="POST" class="d-flex" role="search">
+            <input class="form-control" type="search" name="keyword" placeholder="Nama Mahasiswa/ NIK/ NPM" aria-label="Search" autocomplete="off">
+            <button class="btn btn-outline-success" name="cari" type="submit">Search</button>
+        </form>
+    </div>
+</div>
+<hr>
+
+<div class="mt-5 ml-4">
+    <a href="?halaman=InputDataMahasiswa" class="btn btn-outline-success" type="submit"><i class="fa-solid fa-user-plus mr-2"></i>Tambah Data</a>
 </div>
 
 <div id="table-mahasiswa" class="container table-responsive text-center">
@@ -60,7 +73,7 @@ $data_mahasiswa = query("SELECT * FROM mahasiswa
                     <td class="col-2"><?= $data["kelas"]; ?></td>
                     <td class="col-2"><?= $data["kelompok"]; ?></td>
                     <td class="col-2">
-                        <span class="pt-2 pb-2 pl-4 pr-4 text-white font-weight-bold bg-success rounded"><?= $data["status"]; ?></span>
+                        <span class="pt-2 pb-2 pl-4 pr-4 text-white font-weight-bold bg-success rounded"><?= $data["status_mhs"]; ?></span>
                     </td>
                     <td class="col-2">
                         <a href="?halaman=EditDataMahasiswa&hal=edit&id=<?= $data["id_mahasiswa"]; ?>" data-toogle="tooltip" title="Edit" class="btn btn-outline-warning me-2" type="submit"><i class="fa-sharp fa-solid fa-pen-to-square"></i></a>

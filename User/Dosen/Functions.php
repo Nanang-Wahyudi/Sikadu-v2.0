@@ -13,4 +13,13 @@ function query($tampil)
     return $rows;
 }
 
+function cari($keyword)
+{
+    $cari = "SELECT * FROM dosen 
+             INNER JOIN fakultas ON dosen.id_fakultas = fakultas.id_fakultas
+             WHERE nama_dosen    LIKE '%$keyword%' ";
+
+    return query($cari);
+}
+
 ?>

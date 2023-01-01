@@ -5,15 +5,24 @@ $data_mahasiswa = query("SELECT * FROM mahasiswa
                          INNER JOIN prodi ON mahasiswa.id_prodi = prodi.id_prodi
                          ORDER BY id_mahasiswa DESC");
 
-// if (isset($_POST["cari"])) {
-//     $data_kependudukan = cari($_POST["keyword"]);
-// }
+if (isset($_POST["cari"])) {
+    $data_mahasiswa = cari($_POST["keyword"]);
+}
 ?>
 
 
-<div class="container mt-5">
-    <h3 class="ml-4"><i class="fa-solid fa-user-graduate"></i>&ensp;Halaman Mahasiswa</h3>
+<div class="container row mt-5">
+    <div class="col-md-7">
+        <h3 class="ml-5"><i class="fa-solid fa-user-graduate"></i>&ensp;Mahasiswa</h3>
+    </div>
+    <div class="col-md-5">
+        <form action="" method="POST" class="d-flex" role="search">
+            <input class="form-control" type="search" name="keyword" placeholder="Nama Mahasiswa" aria-label="Search" autocomplete="off">
+            <button class="btn btn-outline-success" name="cari" type="submit">Search</button>
+        </form>
+    </div>
 </div>
+<hr>
 
 <div id="table-mahasiswa" class="container table-responsive text-center">
     <table class="table border-secondary mt-4 table-bordered">
@@ -43,7 +52,7 @@ $data_mahasiswa = query("SELECT * FROM mahasiswa
                     <td class="col-3"><?= $data["jenjang"]; ?></td>
                     <td class="col-3"><?= $data["kelas"]; ?></td>
                     <td class="col-3">
-                        <span class="pt-2 pb-2 pl-4 pr-4 text-white font-weight-bold bg-success rounded"><?= $data["status"]; ?></span>
+                        <span class="pt-2 pb-2 pl-4 pr-4 text-white font-weight-bold bg-success rounded"><?= $data["status_mhs"]; ?></span>
                     </td>
                 </tr>
             </tbody>

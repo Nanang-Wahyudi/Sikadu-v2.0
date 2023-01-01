@@ -2,14 +2,23 @@
 require 'Functions.php';
 $data_matkul = query("SELECT * FROM matakuliah ORDER BY id_matakuliah DESC");
 
-// if (isset($_POST["cari"])) {
-//     $data_kependudukan = cari($_POST["keyword"]);
-// }
+if (isset($_POST["cari"])) {
+    $data_matkul = cari($_POST["keyword"]);
+}
 ?>
 
-<div class="container mt-5">
-    <h3 class="ml-4"><i class="fa-solid fa-book"></i>&ensp;Halaman Mata Kuliah</h3>
+<div class="container row mt-5">
+    <div class="col-md-7">
+        <h3 class="ml-4"><i class="fa-solid fa-book"></i>&ensp;Mata Kuliah</h3>
+    </div>
+    <div class="col-md-5">
+        <form action="" method="POST" class="d-flex" role="search">
+            <input class="form-control" type="search" name="keyword" placeholder="Nama Mata Kuliah" aria-label="Search" autocomplete="off">
+            <button class="btn btn-outline-success" name="cari" type="submit">Search</button>
+        </form>
+    </div>
 </div>
+<hr>
 
 <div id="table-mahasiswa" class="container table-responsive text-center">
     <table class="table border-secondary mt-4 table-bordered">

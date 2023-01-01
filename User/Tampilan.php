@@ -77,7 +77,7 @@
                 </div>
             </nav>
 
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-md-7">
                     <h4 class="mb-4">Sikadu v2.0</h4>
                 </div>
@@ -88,7 +88,7 @@
                     </form>
                 </div>
             </div>
-            <hr>
+            <hr> -->
 
             <?php include 'Config.php'; ?>
 

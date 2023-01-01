@@ -6,14 +6,27 @@ $data_kbm = query("SELECT * FROM kbm
                     INNER JOIN mahasiswa ON kbm.id_mahasiswa = mahasiswa.id_mahasiswa
                     ORDER BY id_kbm DESC");
 
-// if (isset($_POST["cari"])) {
-//     $data_kependudukan = cari($_POST["keyword"]);
-// }
+if (isset($_POST["cari"])) {
+    $data_kbm = cari($_POST["keyword"]);
+}
 ?>
 
 
-<div class="container mt-5">
-    <h3 class="ml-4"><i class="fa-solid fa-person-chalkboard"></i>&ensp;Halaman Kegiatan Belajar Mengajar</h3>
+<div class="container row mt-5">
+    <div class="col-md-7">
+        <h3><i class="fa-solid fa-person-chalkboard"></i>&ensp;Halaman Kegiatan Belajar Mengajar</h3>
+    </div>
+    <div class="col-md-5">
+        <form action="" method="POST" class="d-flex" role="search">
+            <input class="form-control" type="search" name="keyword" placeholder="NPM / NIP" aria-label="Search" autocomplete="off">
+            <button class="btn btn-outline-success" name="cari" type="submit">Search</button>
+        </form>
+    </div>
+</div>
+<hr>
+
+<div class="mt-5 ml-4">
+    <a href="?halaman=InputDatakbm" class="btn btn-outline-success" type="submit"><i class="fa-solid fa-user-plus mr-2"></i>Tambah Data</a>
 </div>
 
 <div id="table-mahasiswa" class="container table-responsive text-center">
@@ -24,6 +37,7 @@ $data_kbm = query("SELECT * FROM kbm
                 <th scope="col" class="col-3" style="background-color: lightgray;">Mata Kuliah</th>
                 <th scope="col" class="col-3" style="background-color: lightgray;">SKS</th>
                 <th scope="col" class="col-3" style="background-color: lightgray;">Nama Dosen</th>
+                <th scope="col" class="col-3" style="background-color: lightgray;">NIP</th>
                 <th scope="col" class="col-3" style="background-color: lightgray;">Nama Mahasiswa</th>
                 <th scope="col" class="col-3" style="background-color: lightgray;">NPM</th>
                 <th scope="col" class="col-3" style="background-color: lightgray;">Kelompok</th>
@@ -44,6 +58,7 @@ $data_kbm = query("SELECT * FROM kbm
                     <td class="col-3"><?= $data["nama_matkul"]; ?></td>
                     <td class="col-3"><?= $data["sks"]; ?></td>
                     <td class="col-3"><?= $data["gelar_depan"] . ". " . $data["nama_dosen"] . ", " . $data["gelar_belakang"]; ?></td>
+                    <td class="col-3"><?= $data["nip"]; ?></td>
                     <td class="col-3"><?= $data["nama_mhs"]; ?></td>
                     <td class="col-3"><?= $data["npm"]; ?></td>
                     <td class="col-3"><?= $data["kelas"] . "/" . $data["kelompok"] . "/" . $data["jenjang"]; ?></td>

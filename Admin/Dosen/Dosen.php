@@ -4,14 +4,27 @@ $data_dosen = query("SELECT * FROM dosen
                          INNER JOIN fakultas ON dosen.id_fakultas = fakultas.id_fakultas
                          ORDER BY id_dosen DESC");
 
-// if (isset($_POST["cari"])) {
-//     $data_kependudukan = cari($_POST["keyword"]);
-// }
+if (isset($_POST["cari"])) {
+    $data_dosen = cari($_POST["keyword"]);
+}
 ?>
 
 
-<div class="container mt-5">
-    <h3 class="ml-4"><i class="fa-solid fa-chalkboard-user"></i>&ensp;Halaman Dosen</h3>
+<div class="container row mt-5">
+    <div class="col-md-7">
+        <h3 class="ml-4"><i class="fa-solid fa-chalkboard-user"></i>&ensp;Halaman Dosen</h3>
+    </div>
+    <div class="col-md-5">
+        <form action="" method="POST" class="d-flex" role="search">
+            <input class="form-control" type="search" name="keyword" placeholder="Nama Dosen/ NIP" aria-label="Search" autocomplete="off">
+            <button class="btn btn-outline-success" name="cari" type="submit">Search</button>
+        </form>
+    </div>
+</div>
+<hr>
+
+<div class="mt-5 ml-4">
+    <a href="?halaman=InputDataDosen" class="btn btn-outline-success" type="submit"><i class="fa-solid fa-user-plus mr-2"></i>Tambah Data</a>
 </div>
 
 <div id="table-mahasiswa" class="container table-responsive text-center">

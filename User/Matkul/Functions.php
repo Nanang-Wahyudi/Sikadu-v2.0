@@ -13,4 +13,11 @@ function query($tampil)
     return $rows;
 }
 
+function cari($keyword)
+{
+    $cari = "SELECT * FROM matakuliah 
+             WHERE nama_matkul   LIKE '%$keyword%' ";
+
+    return query($cari);
+}
 ?>

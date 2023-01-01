@@ -4,14 +4,27 @@ $data_prodi = query("SELECT * FROM prodi
                      INNER JOIN fakultas ON prodi.id_fakultas = fakultas.id_fakultas
                      ORDER BY id_prodi DESC");
 
-// if (isset($_POST["cari"])) {
-//     $data_kependudukan = cari($_POST["keyword"]);
-// }
+if (isset($_POST["cari"])) {
+    $data_prodi = cari($_POST["keyword"]);
+}
 ?>
 
 
-<div class="container mt-5">
-    <h3 class="ml-4"><i class="fa-solid fa-school"></i>&ensp;Halaman Program Studi</h3>
+<div class="container row mt-5">
+    <div class="col-md-7">
+        <h3 class="ml-2"><i class="fa-solid fa-school"></i>&ensp;Halaman Program Studi</h3>
+    </div>
+    <div class="col-md-5">
+        <form action="" method="POST" class="d-flex" role="search">
+            <input class="form-control" type="search" name="keyword" placeholder="Nama Fakultas/ Prodi" aria-label="Search" autocomplete="off">
+            <button class="btn btn-outline-success" name="cari" type="submit">Search</button>
+        </form>
+    </div>
+</div>
+<hr>
+
+<div class="mt-5 ml-4">
+    <a href="?halaman=InputDataProdi" class="btn btn-outline-success" type="submit"><i class="fa-solid fa-user-plus mr-2"></i>Tambah Data</a>
 </div>
 
 <div id="table-mahasiswa" class="container table-responsive text-center">
