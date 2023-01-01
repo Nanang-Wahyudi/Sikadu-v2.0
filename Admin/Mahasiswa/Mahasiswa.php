@@ -72,9 +72,17 @@ if (isset($_POST["cari"])) {
                     <td class="col-2"><?= $data["jenjang"]; ?></td>
                     <td class="col-2"><?= $data["kelas"]; ?></td>
                     <td class="col-2"><?= $data["kelompok"]; ?></td>
+
                     <td class="col-2">
-                        <span class="pt-2 pb-2 pl-4 pr-4 text-white font-weight-bold bg-success rounded"><?= $data["status_mhs"]; ?></span>
+                        <?php  
+                        if ($data["status_mhs"]=='Aktif') {
+                            echo ' <span class="pt-2 pb-2 pl-4 pr-4 text-white font-weight-bold bg-success rounded"> '. $data["status_mhs"].' </span>';
+                        } else {
+                            echo ' <span class="pt-2 pb-2 pl-4 pr-4 text-white font-weight-bold bg-danger rounded"> ' . $data["status_mhs"] . ' </span>';
+                        }
+                        ?>
                     </td>
+
                     <td class="col-2">
                         <a href="?halaman=EditDataMahasiswa&hal=edit&id=<?= $data["id_mahasiswa"]; ?>" data-toogle="tooltip" title="Edit" class="btn btn-outline-warning me-2" type="submit"><i class="fa-sharp fa-solid fa-pen-to-square"></i></a>
 

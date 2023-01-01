@@ -9,7 +9,7 @@ if ($halaman == "mahasiswa") {
     include 'Mahasiswa/Edit.php';
 } elseif ($halaman == "HapusDataMahasiswa") {
     include 'Mahasiswa/Hapus.php';
-}
+} 
 elseif ($halaman == "dosen") {
     include 'Dosen/Dosen.php';
 } elseif ($halaman == "InputDataDosen") {

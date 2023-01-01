@@ -52,7 +52,13 @@ if (isset($_POST["cari"])) {
                     <td class="col-3"><?= $data["jenjang"]; ?></td>
                     <td class="col-3"><?= $data["kelas"]; ?></td>
                     <td class="col-3">
-                        <span class="pt-2 pb-2 pl-4 pr-4 text-white font-weight-bold bg-success rounded"><?= $data["status_mhs"]; ?></span>
+                        <?php
+                        if ($data["status_mhs"] == 'Aktif') {
+                            echo ' <span class="pt-2 pb-2 pl-4 pr-4 text-white font-weight-bold bg-success rounded"> ' . $data["status_mhs"] . ' </span>';
+                        } else {
+                            echo ' <span class="pt-2 pb-2 pl-4 pr-4 text-white font-weight-bold bg-danger rounded"> ' . $data["status_mhs"] . ' </span>';
+                        }
+                        ?>
                     </td>
                 </tr>
             </tbody>
